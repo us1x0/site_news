@@ -13,7 +13,7 @@ class News(models.Model):
 class OptionsNews(models.Model):
     news_zagalovok = models.CharField(max_length=128)
     news = models.CharField(max_length=1024)
-    news_who_write = CharField(max_length=64)
+    news_who_write = models.CharField(max_length=64, null=False)
     news_photo = models.ImageField(blank=True, null=True)
     news_date_time = models.CharField(max_length=32)
     news_category = models.ForeignKey(News, on_delete=models.CASCADE)

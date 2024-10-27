@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
@@ -8,7 +9,14 @@
 <h1>Новости NowTIME🪶</h1>
 <hr>
 <a href='/news/'> ⭕️Жаркие новости на сегодня➡️ </a>
-<br>
+{% if typesOfnews %}
+    {% for for_news in typesOfnews %}
+        <h2>• {{ for_news.which_news }}</h2>  <!-- Заголовок новости -->
+    {% endfor %}
+{% else %}
+    <p>Нет новостей для отображения.</p>  <!-- Сообщение, если новостей нет -->
+{% endif %}
+
 <br>
 <a href='/contacts/'> Контакты ☎️ </a>
 </body>
