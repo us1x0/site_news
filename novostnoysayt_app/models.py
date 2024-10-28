@@ -15,6 +15,7 @@ class OptionsNews(models.Model):
     news = models.CharField(max_length=1024)
     news_who_write = models.CharField(max_length=64, null=False)
     news_photo = models.ImageField(blank=True, null=True)
+    second_photo = models.ImageField(blank=True, null=True)
     news_date_time = models.CharField(max_length=32)
     news_category = models.ForeignKey(News, on_delete=models.CASCADE)
 

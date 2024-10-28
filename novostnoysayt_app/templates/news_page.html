@@ -20,6 +20,12 @@
     <p>{{ news_items.news }}</p>
     <p><strong>Автор: </strong>{{ news_items.news_who_write }}</p>
     <p><strong>Дата: </strong>{{ news_items.news_date_time }}</p>
+    <hr>
+    <h3>Новости Узбекистана ⏳</h3>
+    {% if news_items.second_photo %}
+    <img src="{{ news_items.second_photo.url }}" alt="Фото новости" style="max-width: 350px;">
+    {% endif %}
+
 
 {% endfor %}
 </div>
